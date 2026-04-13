@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+}
+:root{
+    --main-color:rgba(127, 116, 99, 0.816);
+    --main-border-redius:30px;
+    --main-padding:20px;
+    --main-margin:20px;
+} 
+body{
+     background-color: rgba(230, 230, 188, 0.348) !important /*important for override */;
+}
+header{
+    background-color: var(--main-color);
+    padding: 50px ;
+   border-radius: var(--main-border-redius);
+   margin: 20px;
+   display: flex;
+   justify-content: space-between;
+}    
+
+.parent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    gap: 50px;
+    
+    
+}
+.parent div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: calc(100% / 3 );
+    background-color:var(--main-color);
+    padding: var(--main-padding);
+    border-radius: var(--main-border-redius);
+    transition:  all .3s  linear;
+    
+}
+.card1{
+    order: 3;
+}
+.parent div:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 30px 2px rgba(109, 109, 86, 0.625) ;
+    
+}
+ 
+img{
+    width: 100%;
+    
+    border-radius: var(--main-border-redius);
+}
+button{
+    border-radius: var(--main-border-redius);
+    padding: var(--main-padding);
+    background-color: rgba(223, 212, 197, 0.634);
+    font-weight: bold;
+    font-size: medium;
+    border: 3px solid var(--main-color);
+    margin-top: var(--main-margin); /*margin collapse*/
+}
+p{
+    margin-bottom: var(--main-margin); /*margin collapse*/
+    font-size: large;
+}
